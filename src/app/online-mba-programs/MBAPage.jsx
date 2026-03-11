@@ -77,6 +77,25 @@ const JOB_ROLES = [
   },
 ];
 
+const FAQ_DATA = [
+  {
+    q: "What Is The MBA Program?",
+    a: "Our MBA is a 2-year (4 semesters) program that helps you gain a comprehensive understanding of the business world and thrive in a global marketplace.",
+  },
+  {
+    q: "Is This Program UGC Approved?",
+    a: "Yes, we offer only UGC-approved online courses from top-ranked universities. This ensures that the programs you choose have met the high standards set by the University Grants Commission (UGC). For more information you can check the UGC DEB website which maintains a list of recognized universities offering online programs: https://deb.ugc.ac.in/",
+  },
+  {
+    q: "What Is The Eligibility Criteria?",
+    a: "Aspiring candidates with a Bachelor's degree / Graduate Certificate in any discipline from a recognized university can register for this program.",
+  },
+  {
+    q: "Do You Offer Placement Assistance?",
+    a: "Yes, we offer strong placement assistance for UGC-approved online courses from top-ranked universities, ensuring a future-proof education and empowering you to launch a successful career.",
+  },
+];
+
 // Used in the counseling form dropdown only.
 // Universities shown in the slider section come from the API (see useEffect).
 const FORM_UNIVERSITIES = [
@@ -166,17 +185,17 @@ function SliderBtn({ onClick, disabled, label, children }) {
 
 /**
  * Full-width hero banner with overlay text and CTA.
+ * Desktop : 1440×650 aspect ratio, max-height 650px.
+ * Mobile  : fixed 320px height, gradient covers full area,
+ *           content pinned to bottom-left for visibility.
  *
  * @param {Function} onEnquire - Opens the enquiry form modal.
- *   Replace console log in openForm() with:
- *   import Form from "@/Component/Form/Form"
- *   render: {showForm && <Form onClose={() => setShowForm(false)} />}
  */
 function Hero({ onEnquire }) {
   return (
     <section
       className="relative w-full overflow-hidden"
-      style={{ aspectRatio: "1440/650", maxHeight: 650 }}
+      style={{ height: "clamp(320px, 45.14vw, 650px)" }}
     >
       <Image
         src="/heroimage.jpg"
@@ -187,44 +206,79 @@ function Hero({ onEnquire }) {
         sizes="100vw"
         className="object-cover object-center"
       />
-      {/* Dark gradient overlay — left-heavy for text legibility */}
+
+      {/* Gradient overlay
+          Desktop : left-to-right (original design — darkens left side for text)
+          Mobile  : top-to-bottom added on top so bottom text is always readable */}
       <div
         className="absolute inset-0 z-10"
         style={{
-          background:
+          background: [
+            // left-right — desktop readable
             "linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.25) 55%,transparent 100%)",
+            // top-bottom — mobile readable (text sits at bottom on mobile)
+            "linear-gradient(180deg,transparent 30%,rgba(0,0,0,.65) 100%)",
+          ].join(","),
         }}
         aria-hidden="true"
       />
+
+      {/* ── Text content ─────────────────────────────────────────
+          Desktop: absolute positioned, vertically centered at 50%, left at 204px
+          Mobile : sits at bottom of section via flexbox column justify-end
+          Two separate positioning strategies — no nested absolute hacks  ── */}
+
+      {/* DESKTOP layout (md and above) — absolute, exact position */}
       <div
-        className="absolute z-20 text-white max-w-sm"
+        className="hidden md:block absolute z-20 text-white max-w-sm"
         style={{ left: "clamp(20px,14.16%,204px)", top: "50%", transform: "translateY(-65%)" }}
       >
         <h1 className="text-4xl md:text-5xl font-bold leading-snug mb-3">
           Master Of Business<br />Administration (MBA)
         </h1>
-        <p className="text-sm md:text-base opacity-90 tracking-wide mt-2">Duration — 2 Years</p>
-
-        {/* Enquire CTA — triggers the form modal */}
+        <p className="text-sm md:text-base opacity-90 tracking-wide mt-2">
+          Duration — 2 Years
+        </p>
         <button
           onClick={onEnquire}
-          className="mt-4 inline-flex items-center gap-1.5 px-5 py-2 bg-[#025E68] text-white
-            text-sm font-semibold rounded-lg border border-white/30
-            transition-all duration-200
+          className="mt-4 inline-flex items-center gap-1.5 px-5 py-2
+            bg-[#025E68] text-white text-sm font-semibold
+            rounded-lg border border-white/30 transition-all duration-200
             hover:bg-white hover:text-[#025E68] hover:border-[#025E68] hover:-translate-y-px"
         >
           Enquire
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-            <path
-              d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+            <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5"
+              stroke="currentColor" strokeWidth="1.6"
+              strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </div>
+
+      {/* MOBILE layout (below md) — flex column, content at bottom */}
+      <div className="md:hidden absolute inset-0 z-20 flex flex-col justify-end px-5 pb-8 text-white">
+        <h1 className="text-2xl sm:text-3xl font-bold leading-snug mb-2">
+          Master Of Business<br />Administration (MBA)
+        </h1>
+        <p className="text-xs sm:text-sm opacity-90 tracking-wide">
+          Duration — 2 Years
+        </p>
+        <button
+          onClick={onEnquire}
+          className="mt-3 self-start inline-flex items-center gap-1.5 px-4 py-2
+            bg-[#025E68] text-white text-xs sm:text-sm font-semibold
+            rounded-lg border border-white/30 transition-all duration-200
+            active:scale-95"
+        >
+          Enquire
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5"
+              stroke="currentColor" strokeWidth="1.6"
+              strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
+
     </section>
   );
 }
@@ -595,6 +649,78 @@ function HiringPartnersSection() {
 }
 
 // ─────────────────────────────────────────────────────────────
+// FAQ ACCORDION
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Collapsible FAQ accordion. Each item toggles independently.
+ * Data source: FAQ_DATA static array defined at the top of the file.
+ * Add/remove questions there — no changes needed in this component.
+ */
+function FAQ() {
+  const [openIdx, setOpenIdx] = useState(null);
+
+  const toggle = (idx) => setOpenIdx((prev) => (prev === idx ? null : idx));
+
+  return (
+    <section className="pb-16">
+      <SectionHeader title="Frequently Asked Questions" />
+      <div className="space-y-3">
+        {FAQ_DATA.map((item, idx) => {
+          const isOpen = openIdx === idx;
+          return (
+            <div
+              key={idx}
+              className="border border-gray-200 rounded-2xl overflow-hidden"
+            >
+              {/* Question row — clickable */}
+              <button
+                onClick={() => toggle(idx)}
+                aria-expanded={isOpen}
+                className="w-full flex items-center justify-between gap-4
+                  px-5 py-4 text-left text-sm font-semibold text-gray-800
+                  hover:bg-gray-50 transition-colors"
+              >
+                <span>{item.q}</span>
+
+                {/* Chevron rotates 180° when open */}
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                  className={`flex-shrink-0 transition-transform duration-300 text-[#025E68]
+                    ${isOpen ? "rotate-180" : "rotate-0"}`}
+                >
+                  <path
+                    d="M3 6l5 5 5-5"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
+              {/* Answer panel — CSS height transition for smooth open/close */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out
+                  ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+              >
+                <p className="px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+                  {item.a}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
 // FORM ERROR SUMMARY
 // ─────────────────────────────────────────────────────────────
 
@@ -865,9 +991,14 @@ export default function MBAPage() {
     <>
       {/* TODO: <Navbar /> */}
 
-      <main className="max-w-[1440px] mx-auto px-4 md:px-10 lg:px-[204px]">
+      {/*
+        Hero sits OUTSIDE <main> intentionally — same reason as CounselingForm.
+        <main> has px-4 md:px-10 lg:px-[204px] padding which would shrink the
+        hero image and break the full-bleed design. Hero needs raw 100vw width.
+      */}
+      <Hero onEnquire={openForm} />
 
-        <Hero onEnquire={openForm} />
+      <main className="max-w-[1440px] mx-auto px-4 md:px-10 lg:px-[204px]">
 
         <Overview
           colleges={colleges}
@@ -891,6 +1022,8 @@ export default function MBAPage() {
           onPrev={() => setUniIdx((p) => Math.max(0, p - UPPV))}
           onNext={() => setUniIdx((p) => Math.min(universities.length - UPPV, p + UPPV))}
         />
+
+        <FAQ />
 
         <HiringPartnersSection />
       </main>
