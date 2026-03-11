@@ -1,0 +1,491 @@
+1.NavBar
+
+2. image 
+     img src --> public/heroimage.jpg
+     width: 1440;
+     height: 650;
+     top: 73px;
+     angle: 0 deg;
+     opacity: 1;
+
+    on the image write 
+        Master Of Business
+        Administration(MBA)
+                 width: 319;
+                 height: 84;
+                 top: 272px;
+                 left: 204px;
+                 angle: 0 deg;
+                 opacity: 1;
+        Duration - 2 Year 
+                      width: 132;
+                      height: 22;
+                      top: 364px;
+                      left: 204px;
+                      angle: 0 deg;
+                      opacity: 1;
+
+3.Overview
+width: 139;      
+height: 39;
+top: 827px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+Overview    
+
+font-family: Gilroy-SemiBold;
+font-weight: 400;
+font-style: ☞;
+font-size: 32px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+
+inside Overview
+      Enhance Your Career With India's 
+Premier Online MBA   
+  width: 432;
+height: 68;
+top: 926px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+
+Our Master of Business Administration is a 2 year (4 semesters) program that 
+will help you gain a comprehensive understanding of the business world and 
+thrive in a global marketplace. Learn from industry experts, engage in 
+real-world case studies, and put theory into practice through internships 
+and projects.
+
+Join a dynamic group of students and create invaluable connections with 
+your peers remotely.
+
+width: 489;
+height: 176;
+top: 1012px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+
+font-family: Gilroy-Regular;
+font-weight: 400;
+font-style: ☞;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 22px;
+letter-spacing: 0%;
+
+
+image public --> src > overview-img
+width: 504;
+height: 284;
+top: 926px;
+left: 732px;
+angle: 0 deg;
+opacity: 1;
+border-radius: 16px;
+border-width: 0.5px;
+
+
+// main code-base se ye colleges/universites ka list 
+   le lenge ye ek container hai ussme left right par button hai 
+   jo list of colleges ko aage pichhe karta hai 
+
+
+
+//Program Highlights & Advantages
+
+width: 498;
+height: 39;
+top: 1306px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+
+font-family: Gilroy-SemiBold;
+font-weight: 400;
+font-style: ☞;
+font-size: 32px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+
+
+
+Discover our online MBA degree program and begin an exciting educational journey
+
+width: 1032;
+height: 19;
+top: 1353px;
+left: 204px;
+angle: 0 deg;
+opacity: 0.5;
+
+
+font-family: Gilroy-Regular;
+font-weight: 400;
+font-style: ☞;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+4 Image grid cards
+name of image ph1 / ph2 / ph3 / ph4
+
+width: 150;
+height: 50;
+top: 1537px;
+left: 239px;
+angle: 0 deg;
+opacity: 1;
+
+//these 4 are the heading of the each image 
+Live & Recorded lectures
+EasyFinancing
+Study Anytime AnyWhere
+Real world projects
+
+
+font-family: Gilroy-SemiBold;
+font-weight: 400;
+font-style: ☞;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+
+Program Related Specializations
+width: 480;
+height: 39;
+top: 1754px;
+left: 204.01px;
+angle: 0 deg;
+opacity: 1;
+
+Online MBA 
+width: 128;
+height: 29;
+top: 1853px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+//here the blog of the mba from the code base 
+
+
+//Accrediations section 
+
+width: 1032;
+height: 432;
+top: 2462px;
+left: 204px;
+border-radius: 16px;
+border-width: 1px;
+angle: 0 deg;
+opacity: 1;
+background: #025E68;
+background: #025E68;
+border: 1px solid #FFFFFF
+
+
+
+Eligibility
+
+width: 1032;
+height: 0px;
+top: 3041px;
+left: 204px;
+border-width: 1px;
+angle: 0 deg;
+opacity: 1;
+
+// herae will be a section for eligibility section 
+width: 1032;
+height: 306;
+top: 3089px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+
+Fresh graduates, final year students or working 
+professionals.
+
+Entrepreneurs looking to develop skills to manage critical 
+business projects.
+
+Aspirants or working professionals seeking a global career 
+in the fields of Management, Finance, Marketing, Sales, 
+Operations, Logistics among many more
+
+
+
+National
+Graduation in any discipline 
+with 40% marks in the last 
+qualifying examination. Below 
+40% marks, a test is conducted
+ and if passed then the student
+ is eligible for admission.
+
+Applicants must possess 
+sufficient knowledge and 
+understanding of the English 
+Language
+
+
+width: 172;
+height: 154;
+top: 20px;
+left: 22px;
+angle: 0 deg;
+opacity: 1;
+
+
+International
+Graduation in any discipline 
+with 40% marks in the last 
+qualifying examination. Below 
+40% marks, a test is conducted
+ and if passed then the student
+ is eligible for admission.
+
+Applicants must possess 
+sufficient knowledge and 
+understanding of the English 
+Language
+
+width: 172;
+height: 154;
+top: 20px;
+left: 22px;
+angle: 0 deg;
+opacity: 1;
+
+
+Admission Process
+width: 268;
+height: 39;
+top: 3491px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+//here the image will come form the public folder 
+width: 1032;
+height: 330;
+top: 3578px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+src= public/"admission-process.jpg"
+
+
+
+width: 328;
+height: 44;
+top: 3940px;
+left: 556px;
+border-width: 1px;
+angle: 0 deg;
+opacity: 1;
+padding-top: 10px;
+padding-right: 12px;
+padding-bottom: 10px;
+padding-left: 12px;
+gap: 10px;
+
+Book a Free Counseling Session
+width: 263;
+height: 19;
+angle: 0 deg;
+opacity: 1;
+
+this book a free councliming session button is clickalbe when click it will redirect you to a anoter form
+
+
+Job Roles
+width: 144;
+height: 39;
+top: 4080px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+Online MBA unlocks lucrative careers in various fields.
+width: 592;
+height: 19;
+top: 4127px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+Entry level 
+width: 328;
+height: 445;
+top: 4194px;
+left: 204px;
+border-radius: 16px;
+border-width: 1px;
+angle: 0 deg;
+opacity: 1;
+
+Management Trainee
+
+Business Analyst
+
+Marketing Associate
+
+Financial Analyst
+
+Operations Executive
+
+Human Resource Executive
+
+
+mid  level 
+width: 328;
+height: 445;
+top: 4194px;
+left: 556px;
+border-radius: 16px;
+border-width: 1px;
+angle: 0 deg;
+opacity: 1;
+
+Marketing Manager
+
+Human Resource Manager
+
+Project Manager
+
+Finance Manager
+
+Operations Manager
+
+Product Manage
+
+Advance level card
+Director of Operations
+
+Chief Financial Officer (CFO)
+
+Senior Product Manager
+
+Chief Executive Officer (CEO)
+
+Head of Marketing
+
+Chief Human Resource Officer
+
+font-family: Gilroy-Regular;
+font-weight: 400;
+font-style: ☞;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+Choose Your Universities Wisely!
+
+width: 472;
+height: 39;
+top: 4735px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+different universties link will be taken from the main code base 
+width: 240;
+height: 444;
+top: 4822px;
+left: 204px;
+angle: 0 deg;
+opacity: 1;
+
+
+//Hiring Partner
+
+// size of the eah comapny frame in horizontal frame
+width: 240;
+height: 107;
+border-width: 0.5px;
+angle: 0 deg;
+opacity: 1;
+
+
+// new section 
+// Speak to our Admission Counselor to know more about our Programs/ Universities.
+width: 909;
+height: 29;
+top: 48px;
+left: 203px;
+angle: 0 deg;
+opacity: 1;
+
+
+6input tags
+with palce holder
+each input box lauout width: 328;
+height: 40;
+top: 142px;
+left: 203px;
+border-radius: 16px;
+angle: 0 deg;
+opacity: 1;
+
+
+finally in this section there is a button which will redirect to the form width: 328;
+height: 50;
+top: 311px;
+left: 555px;
+border-radius: 16px;
+border-width: 1px;
+angle: 0 deg;
+opacity: 1;
+
+Find Best University
+
+width: 166;
+height: 20;
+top: 15px;
+left: 82px;
+angle: 0 deg;
+opacity: 1;
+
+
+Frequently Asked Questions
+What Is The MBA Program?
+width: 198;
+height: 17;
+top: 6255px;
+left: 218px;
+angle: 0 deg;
+opacity: 1;
+
+Is This Program UGC Approved?
+Is this program UGC approved? Yes, We offer only UGC-approved online courses from top-ranked universities.
+ This ensures that the programs you choose have met the high standards set by the University Grants Commission (UGC).
+  For more information you can check the UGC DEB website which maintains a list of recognized universities 
+  offering online programs https://deb.ugc.ac.in/
+
+
+
+What is the eligibility criteria?
+Aspiring candidates, with a Bachelor’s degree/ Graduate Certificate in any discipline, from a recognized university can register for this program.
+
+Do you offer placement assistance?
+Yes, We offer strong placement assistance for UGC-approved online courses from top-ranked universities, ensuring a future-proof education and empowering you to launch a successful career.
+
+tghen footer ...
